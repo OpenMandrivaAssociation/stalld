@@ -1,6 +1,6 @@
 Summary:	Daemon that finds starving tasks and gives them a temporary boost
 Name:		stalld
-Version:	1.4.0
+Version:	1.5
 Release:	1
 License:	GPLv2
 URL:		https://git.kernel.org/pub/scm/utils/stalld/stalld.git
@@ -44,4 +44,3 @@ allow 10 microseconds of runtime for 1 second of clock time.
 %doc %{_docdir}/README.md
 %doc %{_mandir}/man8/stalld.8*
 %license gpl-2.0.txt
-
