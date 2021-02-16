@@ -1,3 +1,5 @@
+%define __requires_exclude %{_bindir}/bash
+
 Summary:	Daemon that finds starving tasks and gives them a temporary boost
 Name:		stalld
 Version:	1.8.0
