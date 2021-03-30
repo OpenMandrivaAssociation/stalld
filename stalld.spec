@@ -1,7 +1,7 @@
 Summary:	Daemon that finds starving tasks and gives them a temporary boost
 Name:		stalld
-Version:	1.7.0
-Release:	1
+Version:	1.9.0
+Release:	2
 License:	GPLv2
 URL:		https://git.kernel.org/pub/scm/utils/stalld/stalld.git
 Source0:	https://git.kernel.org/pub/scm/utils/stalld/stalld.git/snapshot/%{name}-%{version}.tar.gz
@@ -27,6 +27,9 @@ allow 10 microseconds of runtime for 1 second of clock time.
 %install
 %make_install DOCDIR=%{_docdir} MANDIR=%{_mandir} BINDIR=%{_bindir} DATADIR=%{_datadir} VERSION=%{version}
 %make_install -C redhat UNITDIR=%{_unitdir}
+
+# (tpg) fix shebang
+sed -i -e "s/^#\!.*$/#\!\/bin\/sh/" %{buildroot}%{_bindir}/throttlectl
 
 %post
 %systemd_post %{name}.service
