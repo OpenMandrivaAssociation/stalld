@@ -1,13 +1,13 @@
 Summary:	Daemon that finds starving tasks and gives them a temporary boost
 Name:		stalld
-Version:	1.9.0
-Release:	2
+Version:	1.10.0
+Release:	1
 License:	GPLv2
 URL:		https://git.kernel.org/pub/scm/utils/stalld/stalld.git
 Source0:	https://git.kernel.org/pub/scm/utils/stalld/stalld.git/snapshot/%{name}-%{version}.tar.gz
 BuildRequires:	glibc-devel
-BuildRequires:	systemd-macros
-Requires:	systemd
+BuildRequires:	systemd-rpm-macros
+%systemd_requires
 
 %description
 The stalld program monitors the set of system threads,
