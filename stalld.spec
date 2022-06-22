@@ -1,7 +1,7 @@
 Summary:	Daemon that finds starving tasks and gives them a temporary boost
 Name:		stalld
 Version:	1.15.0
-Release:	1
+Release:	2
 License:	GPLv2
 URL:		https://git.kernel.org/pub/scm/utils/stalld/stalld.git
 Source0:	https://git.kernel.org/pub/scm/utils/stalld/stalld.git/snapshot/%{name}-%{version}.tar.gz
